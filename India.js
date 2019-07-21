@@ -9,13 +9,24 @@ constructor(){
   }
 }
 render(){
+  let content = null;
+  if(this.props.storePlayers==0){
+content = (<button disabled="true" onClick={this.props.OUT}>Out</button>
+) 
+  }
+  else{
+content =    (
+<button onClick={this.props.OUT}>Out</button>
+) 
+  }
   return (
     <div>
 The runs is {this.props.storeRuns} <br/>
 The Total players is {this.props.storePlayers}<br/><hr/>
 <button onClick={this.props.FOUR_RUNS}>4 Runs</button> | 
-<button onClick={this.props.SIX_RUNS}>6 Runs</button> | 
-<button onClick={this.props.OUT}>Out</button>
+<button onClick={this.props.SIX_RUNS}>6 Runs</button> |  &nbsp;
+{content}
+
     </div>
   )
 }

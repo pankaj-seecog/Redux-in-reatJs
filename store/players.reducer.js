@@ -7,7 +7,7 @@ switch(action.type){
 case 'out':
 return {
   ...state,//spread operator
-  players : state.players-1
+  players : (state.players>0)?state.players-1:0
 }
 
 }

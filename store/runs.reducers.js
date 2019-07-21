@@ -4,6 +4,7 @@ let iniRuns = {
 let runsReducer = (state=iniRuns,action)=>{
 switch(action.type){
 case 'fourRuns':
+
 return {
   ...state,//spread operator
   runs : state.runs+4
